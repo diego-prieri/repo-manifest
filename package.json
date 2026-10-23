@@ -1,0 +1,29 @@
+{
+  "name": "repo-manifest",
+  "version": "0.1.0",
+  "description": "Generate a compact, accurate map of a TypeScript codebase for AI coding agents.",
+  "type": "module",
+  "bin": {
+    "repo-manifest": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "manifest": "tsx src/cli.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0"
+  }
+}

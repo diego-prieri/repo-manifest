@@ -1,0 +1,1 @@
+- Fetch data through `src/api/*`, never call axios from components.
